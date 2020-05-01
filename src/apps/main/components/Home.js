@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import "./Fonts.css";
 import "./Home.css";
 import "./bootstrap.min.css";
-import axios from "axios";
+import axios from "compiled/gluestick/node_modules/axios";
 import VinInfo from './VinInfo';
 
 type Ref = { current: any };
