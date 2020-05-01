@@ -7,7 +7,7 @@ import Helmet from "react-helmet";
 
 import Home from "../components/Home";
 
-class HomeApp extends Component<any> {
+export class HomeApp extends Component<any> {
   /**
    * Called by ReactRouter before loading the container. Called prior to the
    * React life cycle so doesn't have access to component's props or state.
