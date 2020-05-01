@@ -283,18 +283,6 @@ export default function VinInfo (props: any) {
                           "N/A"}
                       </td>
                     </tr>
-                    <tr>
-                      <th scope="row">Series</th>
-                      <td>Larry</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Trim</th>
-                      <td>Larry</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Vehicle Type</th>
-                      <td>Larry</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
