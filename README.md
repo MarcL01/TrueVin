@@ -12,9 +12,9 @@ In the command terminal, run the following commands:
     $ npm start
 
 ## 📷 Screenshots
-![Screenshot 1](https://github.com/BigMarco254/FlutterTodo/raw/master/screenshots/1.png)
-![Screenshot 2](https://github.com/BigMarco254/FlutterTodo/raw/master/screenshots/2.png)
-![Screenshot 3](https://github.com/BigMarco254/FlutterTodo/raw/master/screenshots/3.png)
+![Screenshot 1](https://github.com/BigMarco254/TrueVin/raw/master/screenshots/1.png)
+![Screenshot 2](https://github.com/BigMarco254/TrueVin/raw/master/screenshots/2.png)
+![Screenshot 3](https://github.com/BigMarco254/TrueVin/raw/master/screenshots/3.png)
 
 ## ☕️ Like What You See?
 [![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/default-orange.png)](https://www.buymeacoffee.com/BigMarco254)
