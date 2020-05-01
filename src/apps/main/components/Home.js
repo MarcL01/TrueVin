@@ -85,12 +85,13 @@ export default class Home extends Component<any> {
   getVINInfo(vin: string) {
 
     $.ajax({
-      url: "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/440?format=json",
-      type: "GET",
+      url: "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/",
+      type: "POST",
+      data: { format: "json", data: "3GNDA13D76S000000;5XYKT3A12CG000000;"},
       dataType: "json",
       success: function(result)
       {
-        console.log("test results: ", result);
+        console.log(result);
       },
       error: function(xhr, ajaxOptions, thrownError)
       {
