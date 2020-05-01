@@ -84,28 +84,27 @@ export default class Home extends Component<any> {
   getVINInfo: Function;
   getVINInfo(vin: string) {
 
-    $.ajax({
-      url: "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/",
-      type: "POST",
-      data: { format: "json", data: "3GNDA13D76S000000;5XYKT3A12CG000000;"},
-      dataType: "json",
-      success: function(result)
-      {
-        console.log(result);
-      },
-      error: function(xhr, ajaxOptions, thrownError)
-      {
-        console.log(xhr.status);
-        console.log(thrownError);
-      }
-    });
+    // $.ajax({
+    //   url: "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/",
+    //   type: "POST",
+    //   data: { format: "json", data: `${vin};`},
+    //   dataType: "json",
+    //   success: function(result)
+    //   {
+    //     console.log(result);
+    //   },
+    //   error: function(xhr, ajaxOptions, thrownError)
+    //   {
+    //     console.log(xhr.status);
+    //     console.log(thrownError);
+    //   }
+    // });
 
     axios({
           method: 'get',
           url: `https://cors-anywhere.herokuapp.com/https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/${vin}?format=json`,
           headers: {
             'x-requested-with': 'null',
-            'origin': 'null',
           }
         })
       .then((resp) => {
