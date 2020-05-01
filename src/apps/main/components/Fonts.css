@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@font-face {
+	font-family: Aktiv Grotesk;
+	src: url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-regular-e7523876642be31da61cd4656c04377d.woff2) format("woff2"), url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-regular-84f05666b6126c78398b36febe7c8247.woff) format("woff"), url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-regular-a6e94d69768e8015e4a1f308cd396121.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: Aktiv Grotesk;
+	src: url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-medium-154765fdf6086b865d014196ca929610.woff2) format("woff2"), url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-medium-c22d84a949910427fa7edb5521470e0c.woff) format("woff"), url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-medium-50ccabf6bd499778899577b18b2ae476.ttf) format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: Aktiv Grotesk;
+	src: url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-bold-79d58ca1c163ce022b726a3465d7d0cd.woff2) format("woff2"), url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-bold-6463cc3b4cdb4e7a9172ff2ccb3f9840.woff) format("woff"), url(https://consumer.tcimg.net/assets/20-04/aktiv-grotesk-bold-5b415c5066e4f0b0b17a8b5f76dc4c2b.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: Radikal;
+	src: url(https://consumer.tcimg.net/assets/20-04/radikal-regular-edbd84111a2b37cf1bc602f43388be47.woff2) format("woff2"), url(https://consumer.tcimg.net/assets/20-04/radikal-regular-7be162fb07779ea1ba33cb4e5b864249.woff) format("woff"), url(https://consumer.tcimg.net/assets/20-04/radikal-regular-ebccbfc9c176c5abe4eed779c2fb10e8.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: Radikal;
+	src: url(https://consumer.tcimg.net/assets/20-04/radikal-medium-d5632809ba915aae4b3ce5dcd0b51dba.woff2) format("woff2"), url(https://consumer.tcimg.net/assets/20-04/radikal-medium-6899714abedace749d2f845282b9d3e9.woff) format("woff"), url(https://consumer.tcimg.net/assets/20-04/radikal-medium-6747cc9ab0984d1b8a92af6d001257e2.ttf) format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: Radikal;
+	src: url(https://consumer.tcimg.net/assets/20-04/radikal-bold-c77dc11a3411e5b0d284d607c1b01db5.woff2) format("woff2"), url(https://consumer.tcimg.net/assets/20-04/radikal-bold-8e0f495849e56d63a14f62f978c8d15e.woff) format("woff"), url(https://consumer.tcimg.net/assets/20-04/radikal-bold-2be3f13319a1ec4b1e68c4c684975a28.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap
+}

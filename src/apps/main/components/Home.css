@@ -1,0 +1,112 @@
+* {
+  font-family: Radikal, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.Home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  color: white;
+  background-color: #222;
+}
+
+.Home-box {
+  width: 100%;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  background-color: #F5F5F5;
+}
+
+.Home-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+@media (max-width: 40rem) {
+  .Home-box {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .Home-row {
+    flex-wrap: wrap;
+  }
+}
+
+.Home-jumbo {
+  background-image: url(https://consumer.tcimg.net/assets/20-04/timeline-hero-mobile-2a372b47b3b745d87f0b4b9239730e4d.svg) !important;
+  background-position: bottom right !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (min-width: 769px) {
+  .Home-jumbo {
+    background-image: url(https://consumer.tcimg.net/assets/20-04/timeline-hero-tablet-b01fdf127577888c5685bf4fecc1eff0.svg) !important;
+    background-position: bottom right !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .Home-jumbo {
+    background-image: url(https://consumer.tcimg.net/assets/20-04/timeline-hero-left-eec4c3ae686d567d691f3fbc3738def3.svg), url(https://consumer.tcimg.net/assets/20-04/timeline-hero-right-e8fc310440921c6dbae70c2c0bd86aed.svg) !important;
+    background-position: center left, right center !important;
+    background-size: 18%, 18% !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .Home-jumbo {
+    background-size: contain !important;
+  }
+}
+
+.Home-jumbo-text {
+  max-width: 699px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.Home-jumbo-input {
+  max-width: 492px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.btn-more-round {
+  border-radius: 18px !important;
+}
+
+.btn-input-more-round {
+  border-top-right-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
+}
+
+.input-btn-more-round {
+  border-top-left-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+}
+
+.btn-true {
+  color: #fff !important;
+  background-color: #109de7 !important;
+  border-color: #109de7 !important;
+}
+
+.btn-true:hover,
+.btn-true:active,
+.btn-true:focus {
+  color: #fff !important;
+  background-color: #5ac1e7 !important;
+  border-color: #5ac1e7 !important;
+}
+
+.navbar-brand {
+  font-size: 28px !important;
+  font-weight: 600 !important;
+}
+
+.bg-true {
+  background-color: #109de7 !important;
+}
