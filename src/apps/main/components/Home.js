@@ -31,6 +31,7 @@ export default class Home extends Component<any> {
     this.startLoadingBar = this.startLoadingBar.bind(this);
     this.updateInput = this.updateInput.bind(this);
     this.keypressInput = this.keypressInput.bind(this);
+    this.getVINInfo = this.getVINInfo.bind(this);
   }
 
   startLoadingBar: Function;
@@ -82,16 +83,21 @@ export default class Home extends Component<any> {
 
   getVINInfo: Function;
   getVINInfo(vin: string) {
-    axios
-      .get(
-        `https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/${vin}?format=json`
-      )
+    axios({
+          method: 'get',
+          url: `https://cors-anywhere.herokuapp.com/https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/${vin}?format=json`,
+          headers: {
+            'x-requested-with': 'null',
+            'origin': 'null',
+          }
+        })
       .then((resp) => {
+        console.log("our resp is: ", resp);
         if (this.loadingInterval !== undefined) {
           clearInterval(this.loadingInterval);
         }
         if (resp.status !== 200) {
-          this.props.errorMessage("Error Connecting to Server");
+          this.props.changeError("Error Connecting to Server");
           return;
         }
         let results = resp.data.Results;
@@ -106,6 +112,8 @@ export default class Home extends Component<any> {
       })
       .catch((e) => {
         console.log("error: ", e);
+        console.log("whats this?", this);
+        this.props.changeError("Error Connecting to Server");
       });
   }
 
