@@ -6,11 +6,11 @@ export default function VinInfo (props: any) {
   return (
     <div>
         <div className="container">
-          <div className="card">
-            <h5 className="card-header navbar-light">
+          <div className="card mb-3">
+            <h5 className="card-header navbar-light d-flex align-items-center justify-content-between">
               Basic Information
               <button
-                className="navbar-toggler float-right"
+                className="navbar-toggler"
                 type="button"
                 data-toggle="collapse"
                 data-target="#basicCollapse"
@@ -108,8 +108,8 @@ export default function VinInfo (props: any) {
               </div>
             </div>
           </div>
-          <div className="card">
-            <h5 className="card-header navbar-light">
+          <div className="card mb-3">
+            <h5 className="card-header navbar-light d-flex align-items-center justify-content-between">
               Exterior Information
               <button
                 className="navbar-toggler float-right"
@@ -233,8 +233,8 @@ export default function VinInfo (props: any) {
               </div>
             </div>
           </div>
-          <div className="card">
-            <h5 className="card-header navbar-light">
+          <div className="card mb-3">
+            <h5 className="card-header navbar-light d-flex align-items-center justify-content-between">
               Manufacturer Information
               <button
                 className="navbar-toggler float-right"
@@ -300,8 +300,8 @@ export default function VinInfo (props: any) {
               </div>
             </div>
           </div>
-          <div className="card">
-            <h5 className="card-header navbar-light">
+          <div className="card mb-3">
+            <h5 className="card-header navbar-light d-flex align-items-center justify-content-between">
               Interior Information
               <button
                 className="navbar-toggler float-right"
@@ -396,8 +396,8 @@ export default function VinInfo (props: any) {
               </div>
             </div>
           </div>
-          <div className="card">
-            <h5 className="card-header navbar-light">
+          <div className="card mb-3">
+            <h5 className="card-header navbar-light d-flex align-items-center justify-content-between">
               Drivetrain Information
               <button
                 className="navbar-toggler float-right"
@@ -575,8 +575,8 @@ export default function VinInfo (props: any) {
               </div>
             </div>
           </div>
-          <div className="card">
-            <h5 className="card-header navbar-light">
+          <div className="card mb-3">
+            <h5 className="card-header navbar-light d-flex align-items-center justify-content-between">
               Electric Information
               <button
                 className="navbar-toggler float-right"
