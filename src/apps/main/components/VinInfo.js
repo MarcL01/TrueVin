@@ -1,9 +1,10 @@
 /* @flow */
 
-import React, { Component } from "react";
+import React from "react";
 
-export default (props: any) => {
-    return <div>
+export default function VinInfo (props: any) {
+  return (
+    <div>
         <div className="container">
           <div className="card">
             <h5 className="card-header navbar-light">
@@ -701,4 +702,5 @@ export default (props: any) => {
           </div>
         </div>
     </div>
+  );
 }

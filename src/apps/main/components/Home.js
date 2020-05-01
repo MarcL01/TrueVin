@@ -6,13 +6,14 @@ import "./Home.css";
 import "./bootstrap.min.css";
 import axios from "compiled/gluestick/node_modules/axios";
 import VinInfo from './VinInfo';
+import VinLoader from './VinLoader';
 
 type Ref = { current: any };
 
 export default class Home extends Component<any> {
   vinInputRef: Ref;
   loadingInterval: typeof undefined | IntervalID;
-  vinRegex: RegExp;
+  vinRegex: RegExp = /^(?<wmi>[A-HJ-NPR-Z\d]{3})(?<vds>[A-HJ-NPR-Z\d]{5})(?<check>[\dX])(?<vis>(?<year>[A-HJ-NPR-Z\d])(?<plant>[A-HJ-NPR-Z\d])(?<seq>[A-HJ-NPR-Z\d]{6}))$/;
   ignoreVariables = [
     "Suggested VIN",
     "Error Code",
@@ -25,7 +26,6 @@ export default class Home extends Component<any> {
     super(props);
 
     this.vinInputRef = React.createRef();
-    this.vinRegex = /^(?<wmi>[A-HJ-NPR-Z\d]{3})(?<vds>[A-HJ-NPR-Z\d]{5})(?<check>[\dX])(?<vis>(?<year>[A-HJ-NPR-Z\d])(?<plant>[A-HJ-NPR-Z\d])(?<seq>[A-HJ-NPR-Z\d]{6}))$/;
 
     this.searchNewVin = this.searchNewVin.bind(this);
     this.startLoadingBar = this.startLoadingBar.bind(this);
@@ -37,6 +37,8 @@ export default class Home extends Component<any> {
   startLoadingBar() {
     if (this.loadingInterval !== undefined) {
       clearInterval(this.loadingInterval);
+      this.props.updateProgress(1);
+    }else {
       this.props.updateProgress(1);
     }
     this.loadingInterval = setInterval(() => {
@@ -78,6 +80,7 @@ export default class Home extends Component<any> {
     this.vinInputRef.current.value = this.vinInputRef.current.value.toUpperCase();
   }
 
+  getVINInfo: Function;
   getVINInfo(vin: string) {
     axios
       .get(
@@ -99,10 +102,6 @@ export default class Home extends Component<any> {
           }
           improvedResults[res["Variable"].split(" ").join("")] = res.Value;
         }
-        console.log("resp: ", resp);
-        console.log("data: ", resp.data);
-        console.log("results: ", improvedResults);
-
         this.props.updateData(improvedResults);
       })
       .catch((e) => {
@@ -141,7 +140,7 @@ export default class Home extends Component<any> {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="https://github.com/BigMarco254/TrueVin" target="_blank">
                     GitHub
                   </a>
                 </li>
@@ -179,23 +178,10 @@ export default class Home extends Component<any> {
                 </button>
               </div>
             </div>
+            <p className="text-danger">{this.props.errorMessage.length > 0 ? (<small>Error: {this.props.errorMessage}</small>) : " "}</p>
           </div>
         </div>
-        <h1>Error: {this.props.errorMessage}</h1>
-        <div className="container text-center">
-          <h2>We are looking up your VIN</h2>
-          <small>(This may take a minute)</small>
-          <div className="progress" style={{ height: 25, borderRadius: 18 }}>
-            <div
-              className="progress-bar progress-bar-striped progress-bar-animated bg-true"
-              role="progressbar"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style={{ width: `${this.props.progress}%` }}
-            ></div>
-          </div>
-        </div>
+        {this.props.progress > 0 ? (<VinLoader progress={this.props.progress}/>) : null}
 
         {this.props.hasInformation ? (
           <VinInfo decodedInformation={this.props.decodedInformation}/>

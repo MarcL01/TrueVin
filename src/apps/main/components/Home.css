@@ -39,12 +39,14 @@
   background-image: url(https://consumer.tcimg.net/assets/20-04/timeline-hero-mobile-2a372b47b3b745d87f0b4b9239730e4d.svg) !important;
   background-position: bottom right !important;
   background-repeat: no-repeat !important;
+  padding-bottom: 180px !important;
 }
 
 @media (min-width: 769px) {
   .Home-jumbo {
     background-image: url(https://consumer.tcimg.net/assets/20-04/timeline-hero-tablet-b01fdf127577888c5685bf4fecc1eff0.svg) !important;
     background-position: bottom right !important;
+    padding-bottom: 200px !important;
   }
 }
 
@@ -53,6 +55,8 @@
     background-image: url(https://consumer.tcimg.net/assets/20-04/timeline-hero-left-eec4c3ae686d567d691f3fbc3738def3.svg), url(https://consumer.tcimg.net/assets/20-04/timeline-hero-right-e8fc310440921c6dbae70c2c0bd86aed.svg) !important;
     background-position: center left, right center !important;
     background-size: 18%, 18% !important;
+    padding-top: 125px !important;
+    padding-bottom: 50px !important;
   }
 }
 

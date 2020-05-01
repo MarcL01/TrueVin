@@ -10,7 +10,7 @@ type State = {
 const INITIAL_STATE: State = {
   errorMessage: "",
   decodedInformation: {},
-  progress: 1,
+  progress: 0,
   hasInformation: false,
 };
 
@@ -18,13 +18,16 @@ export default (state: State = INITIAL_STATE, action: { type: string, payload?: 
   switch (action.type) {
     case "ERROR":
       return Object.assign({}, state, {
-        errorMessage: String(action.payload)
+        errorMessage: String(action.payload),
+        progress: 0,
+        hasInformation: false,
+        decodedInformation: {}
       });
     case "CLEAR":
       return Object.assign({}, state, {
         errorMessage: "",
         decodedInformation: {},
-        progress: 1,
+        progress: 0,
         hasInformation: false
       });
     case "PROGRESS":
@@ -33,7 +36,8 @@ export default (state: State = INITIAL_STATE, action: { type: string, payload?: 
       });
     case "UPDATE":
       return Object.assign({}, state, {
-        progress: 100,
+        errorMessage: "",
+        progress: 0,
         decodedInformation: action.payload,
         hasInformation: true,
       });
